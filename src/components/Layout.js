@@ -18,10 +18,12 @@ class Layout extends React.Component {
           <Title>{title}</Title>
           <Navbar />
         </HeaderContainer>
-        <Content>{children}</Content>
-        <Footer>
+        <MainContainer>
+          <Content>{children}</Content>
+        </MainContainer>
+        {/* <Footer>
           ©2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </Footer>
+        </Footer> */}
       </LayoutContainer>
     )
   }
@@ -31,6 +33,12 @@ const globalStyle = css`
   html {
     background-color: lightgray;
   }
+`
+
+const LayoutContainer = styled.div`
+  background-color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
+  height: fit-content;
 `
 
 const HeaderContainer = styled.div`
@@ -50,17 +58,16 @@ const Title = styled.h1`
   line-height: 1.5em;
 `
 
-const LayoutContainer = styled.div`
-  background-color: whitesmoke;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
+const MainContainer = styled.main`
+  margin: 8px;
+  margin-right: auto;
+  margin-left: auto;
+  width: fit-content;
 `
 
 const Content = styled.div`
-  margin: 8px;
   padding: 8px;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 48rem;
+  width: 48rem;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px 0px;
 `
