@@ -12,10 +12,7 @@ class Index extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
+        <SEO title="Home"/>
         ようこそ
       </Layout>
     )

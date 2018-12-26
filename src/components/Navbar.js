@@ -2,17 +2,17 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
-export default function Navbar() {
+export default function Navbar({ location }) {
   return (
     <Nav>
       <MenuList>
-        <MenuItem>
+        <MenuItem pathname={location.pathname}>
           <Link to="/">Home</Link>
         </MenuItem>
-        <MenuItem>
+        <MenuItem pathname={location.pathname}>
           <Link to="/about">About</Link>
         </MenuItem>
-        <MenuItem>
+        <MenuItem pathname={location.pathname}>
           <Link to="/blog">Blog</Link>
         </MenuItem>
       </MenuList>
@@ -35,10 +35,10 @@ const MenuList = styled.ul`
 
 const MenuItem = styled.li`
   margin: 0px;
-  /* margin-left: 1em; */
   margin-right: 1em;
   font-size: 24px;
-  color: white;
+  color: ${props =>
+    props.pathname === props.children.props.to ? 'gray' : 'white'};
   cursor: pointer;
   transition: all 0.2s linear;
   :hover {

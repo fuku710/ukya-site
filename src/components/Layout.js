@@ -16,7 +16,7 @@ class Layout extends React.Component {
         <Global styles={globalStyle} />
         <HeaderContainer>
           <Title>{title}</Title>
-          <Navbar />
+          <Navbar location={location} />
         </HeaderContainer>
         <MainContainer>
           <Content>{children}</Content>
