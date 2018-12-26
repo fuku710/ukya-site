@@ -13,8 +13,11 @@ class Layout extends React.Component {
     const rootPath = `${__PATH_PREFIX__}/`
     return (
       <LayoutContainer>
-        <Header>{title}</Header>
-        <Navbar />
+        <HeaderContainer>
+          <Title>{title}</Title>
+          <Navbar />
+        </HeaderContainer>
+
         <Content>{children}</Content>
         <Footer>
           ©2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
@@ -24,13 +27,35 @@ class Layout extends React.Component {
   }
 }
 
-const LayoutContainer = styled.div``
+const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: deepskyblue;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
+`
+
+const Title = styled.h1`
+  margin: 0px;
+  margin-left: 1em;
+  font-size: 32px;
+  color: white;
+  line-height: 1.5em;
+`
+
+const LayoutContainer = styled.div`
+  background-color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
+`
 
 const Content = styled.div`
-  margin: 16px;
+  margin: 8px;
+  padding: 8px;
   margin-right: auto;
   margin-left: auto;
   max-width: 48rem;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px 0px;
 `
 
 const Footer = styled.footer`

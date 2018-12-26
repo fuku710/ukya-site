@@ -32,7 +32,7 @@ const MenuItem = styled.li`
   margin-left: 1em;
   margin-right: 1em;
   font-size: 24px;
-  /* color: white; */
+  color: white;
   cursor: pointer;
   transition: all 0.2s linear;
   :hover {
