@@ -38,6 +38,7 @@ const HeaderContainer = styled.div`
 const Title = styled.h1`
   margin: 0px;
   margin-left: 1em;
+  margin-right: 1em;
   font-size: 32px;
   color: white;
   line-height: 1.5em;

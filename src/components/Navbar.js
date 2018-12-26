@@ -6,7 +6,9 @@ export default function Navbar() {
   return (
     <Nav>
       <MenuList>
-        <MenuItem>Home</MenuItem>
+        <MenuItem>
+          <Link to="/">Home</Link>
+        </MenuItem>
         <MenuItem>About</MenuItem>
         <MenuItem>Blog</MenuItem>
       </MenuList>
@@ -29,7 +31,7 @@ const MenuList = styled.ul`
 
 const MenuItem = styled.li`
   margin: 0px;
-  margin-left: 1em;
+  /* margin-left: 1em; */
   margin-right: 1em;
   font-size: 24px;
   color: white;
@@ -37,5 +39,9 @@ const MenuItem = styled.li`
   transition: all 0.2s linear;
   :hover {
     color: gray;
+  }
+  > * {
+    color: inherit;
+    text-decoration: none;
   }
 `
