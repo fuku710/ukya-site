@@ -15,7 +15,8 @@ export default function Navbar() {
 }
 
 const Nav = styled.nav`
-  background-color: deepskyblue;
+  /* background-color: deepskyblue;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 4px 0px; */
 `
 
 const MenuList = styled.ul`
@@ -31,7 +32,7 @@ const MenuItem = styled.li`
   margin-left: 1em;
   margin-right: 1em;
   font-size: 24px;
-  color: white;
+  /* color: white; */
   cursor: pointer;
   transition: all 0.2s linear;
   :hover {

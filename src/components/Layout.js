@@ -28,6 +28,9 @@ const LayoutContainer = styled.div``
 
 const Content = styled.div`
   margin: 16px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 48rem;
 `
 
 const Footer = styled.footer`
