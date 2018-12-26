@@ -1,5 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Global, css } from '@emotion/core'
+import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
 import { rhythm, scale } from '../utils/typography'
@@ -13,6 +14,7 @@ class Layout extends React.Component {
     const rootPath = `${__PATH_PREFIX__}/`
     return (
       <LayoutContainer>
+        <Global styles={globalStyle} />
         <HeaderContainer>
           <Title>{title}</Title>
           <Navbar />
@@ -26,6 +28,12 @@ class Layout extends React.Component {
     )
   }
 }
+
+const globalStyle = css`
+  html {
+    background-color: lightgray;
+  }
+`
 
 const HeaderContainer = styled.div`
   display: flex;
