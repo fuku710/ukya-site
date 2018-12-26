@@ -9,12 +9,16 @@ const googleFonts = [
     name: 'M PLUS Rounded 1c',
     styles: ['400'],
   },
+  {
+    name: 'Orbitron',
+    styles: ['400'],
+  },
 ]
 
 const typography = new Typography({
   googleFonts: googleFonts,
   headerFontFamily: ['M PLUS 1p'],
-  bodyFontFamily: ['M PLUS Rounded 1c','YuGothic','Yu Gothic','sans-serif'],
+  bodyFontFamily: ['M PLUS Rounded 1c', 'YuGothic', 'Yu Gothic', 'sans-serif'],
 })
 
 // Hot reload typography in development.
