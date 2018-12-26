@@ -5,7 +5,7 @@ import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-class Index extends React.Component {
+class About extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -16,13 +16,13 @@ class Index extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        ようこそ
+        <Bio />
       </Layout>
     )
   }
 }
 
-export default Index
+export default About
 
 export const pageQuery = graphql`
   query {

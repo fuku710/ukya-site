@@ -9,8 +9,12 @@ export default function Navbar() {
         <MenuItem>
           <Link to="/">Home</Link>
         </MenuItem>
-        <MenuItem>About</MenuItem>
-        <MenuItem>Blog</MenuItem>
+        <MenuItem>
+          <Link to="/about">About</Link>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/blog">Blog</Link>
+        </MenuItem>
       </MenuList>
     </Nav>
   )

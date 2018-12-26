@@ -6,7 +6,6 @@ import { Link } from 'gatsby'
 import { rhythm, scale } from '../utils/typography'
 
 import Navbar from './Navbar'
-import Header from './Header'
 
 class Layout extends React.Component {
   render() {
@@ -19,7 +18,6 @@ class Layout extends React.Component {
           <Title>{title}</Title>
           <Navbar />
         </HeaderContainer>
-
         <Content>{children}</Content>
         <Footer>
           ©2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
