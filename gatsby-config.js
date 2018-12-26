@@ -2,10 +2,12 @@ module.exports = {
   siteMetadata: {
     title: `ukya.tk`,
     author: `Fukuda Naoto`,
+    handleName: `never`,
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `never9612`,
+      github: `never9612`,
     },
   },
   plugins: [

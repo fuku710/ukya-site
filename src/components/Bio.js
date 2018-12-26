@@ -1,46 +1,52 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 import Image from 'gatsby-image'
-
-import { rhythm } from '../utils/typography'
 
 function Bio() {
   return (
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { author, social } = data.site.siteMetadata
+        const { author, handleName, social } = data.site.siteMetadata
         return (
-          <div
-            style={{
-              display: `flex`,
-              marginBottom: rhythm(2.5),
-            }}
-          >
+          <BioWrapper>
             <Image
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
+              css={css`
+                margin: 0;
+                minwidth: 50;
+                border-radius: 100%;
+              `}
             />
-            <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
+            <Text>
+              Name:{author}
+              <br />
+              HN:{handleName}
+              <br />
+              Twitter:
               <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
+                @{social.twitter}
               </a>
-            </p>
-          </div>
+              <br />
+              GitHub:
+              <a href={`https://github.com/${social.github}`}>
+                {social.github}
+              </a>
+            </Text>
+          </BioWrapper>
         )
       }}
     />
   )
 }
+
+const BioWrapper = styled.div``
+const Text = styled.p`
+  margin: 0px;
+`
 
 const bioQuery = graphql`
   query BioQuery {
@@ -54,8 +60,10 @@ const bioQuery = graphql`
     site {
       siteMetadata {
         author
+        handleName
         social {
           twitter
+          github
         }
       }
     }
