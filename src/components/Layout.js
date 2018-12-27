@@ -4,10 +4,15 @@ import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 // import PageTransition from 'gatsby-plugin-page-transitions'
 
-
 import Navbar from './Navbar'
 
 class Layout extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isOpenedMenu: false,
+    }
+  }
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
@@ -16,13 +21,19 @@ class Layout extends React.Component {
         <Global styles={globalStyle} />
         <HeaderContainer>
           <Title>{title}</Title>
-          <Navbar location={location} />
+          <Navbar
+            location={location}
+            isOpened={this.state.isOpenedMenu}
+            onClick={() => {
+              this.setState({ isOpenedMenu: !this.state.isOpenedMenu })
+            }}
+          />
         </HeaderContainer>
         {/* <PageTransition> */}
-          <MainContainer>
-            <Content>{children}</Content>
-          </MainContainer>
-          {/* <Footer>
+        <MainContainer>
+          <Content>{children}</Content>
+        </MainContainer>
+        {/* <Footer>
           ©2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
         </Footer> */}
         {/* </PageTransition> */}
@@ -71,7 +82,7 @@ const MainContainer = styled.main`
 
 const Content = styled.div`
   padding: 8px;
-  width: 48rem;
+  max-width: 48rem;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px 0px;
 `
