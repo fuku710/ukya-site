@@ -3,7 +3,7 @@ module.exports = {
     title: `ukya.tk`,
     author: `Fukuda Naoto`,
     handleName: `never`,
-    description: ``,
+    description: `謎のゲームを公開したり、ブログを書いてます`,
     siteUrl: `https://ukya.tk`,
     social: {
       twitter: `never9612`,
