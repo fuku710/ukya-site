@@ -72,10 +72,10 @@ const HambuergerMenuButton = styled.button`
 const HambuergerMenu = styled.ul`
   margin: 0px;
   padding: 16px;
-  width: 35vw;
+  width: 50vw;
   height: 100vh;
   position: fixed;
-  left: ${props => (props.isOpened ? '65vw' : '100vw')};
+  left: ${props => (props.isOpened ? '50vw' : '100vw')};
   top: 0;
   background: deepskyblue;
   display: flex;
