@@ -84,5 +84,11 @@ module.exports = {
     },
     `gatsby-plugin-emotion`,
     // `gatsby-plugin-page-transitions`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-46825674-2`,
+      },
+    },
   ],
 }
