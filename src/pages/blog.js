@@ -27,7 +27,7 @@ class BlogIndex extends React.Component {
               title={title}
               date={node.frontmatter.date}
               excerpt={node.excerpt}
-              to={node.fields.slug}
+              to={`blog/${node.fields.slug}`}
               key={node.fields.slug}
             />
           )
