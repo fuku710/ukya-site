@@ -2,7 +2,7 @@ import React from 'react'
 import { Global, css } from '@emotion/core'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
-import PageTransition from 'gatsby-plugin-page-transitions'
+// import PageTransition from 'gatsby-plugin-page-transitions'
 
 
 import Navbar from './Navbar'
@@ -18,14 +18,14 @@ class Layout extends React.Component {
           <Title>{title}</Title>
           <Navbar location={location} />
         </HeaderContainer>
-        <PageTransition>
+        {/* <PageTransition> */}
           <MainContainer>
             <Content>{children}</Content>
           </MainContainer>
           {/* <Footer>
           ©2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
         </Footer> */}
-        </PageTransition>
+        {/* </PageTransition> */}
       </LayoutContainer>
     )
   }

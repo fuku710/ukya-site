@@ -84,6 +84,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`,
-    `gatsby-plugin-page-transitions`,
+    // `gatsby-plugin-page-transitions`,
   ],
 }
