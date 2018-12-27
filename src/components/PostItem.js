@@ -2,11 +2,11 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
-export default function PostItem({ title, date, excerpt, to }) {
+export default function PostItem({ title, date, excerpt, to, href }) {
   return (
     <ItemContainer>
       <Title>
-        <Link to={to}>{title}</Link>
+        {href ? <a href={href}>{title}</a> : <Link to={to}>{title}</Link>}
       </Title>
       <Date>{date}</Date>
       <Excerpt>{excerpt}</Excerpt>

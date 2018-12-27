@@ -5,6 +5,8 @@ import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
+import chimpan from '../../content/assets/chimpanzee.png'
+
 class Index extends React.Component {
   render() {
     const { data } = this.props
@@ -12,8 +14,8 @@ class Index extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Home"/>
-        ようこそ
+        <SEO title="Home" />
+        <img src={chimpan} />
       </Layout>
     )
   }

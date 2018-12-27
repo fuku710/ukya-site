@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const CopyWebpackPlugin = require(`copy-webpack-plugin`)
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -67,4 +68,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
+
+}
+
+exports.onCreateWebpackConfig = ({ rules, plugins, actions }) => {
+  actions.setWebpackConfig({
+    plugins: [
+      new CopyWebpackPlugin([{ from: './content/games', to: 'games' }]),
+    ],
+  })
 }

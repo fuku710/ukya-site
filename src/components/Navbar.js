@@ -15,6 +15,9 @@ export default function Navbar({ location }) {
         <MenuItem pathname={location.pathname}>
           <Link to="/blog">Blog</Link>
         </MenuItem>
+        <MenuItem pathname={location.pathname}>
+          <Link to="/games">Games</Link>
+        </MenuItem>
       </MenuList>
     </Nav>
   )
