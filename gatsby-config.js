@@ -4,7 +4,7 @@ module.exports = {
     author: `Fukuda Naoto`,
     handleName: `never`,
     description: `うきゃうきゃ`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://ukya.tk`,
     social: {
       twitter: `never9612`,
       github: `never9612`,
