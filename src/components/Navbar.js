@@ -81,7 +81,7 @@ const HambuergerMenu = styled.ul`
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  transition: all 0.5s;
+  transition: all 0.3s;
   z-index: 2;
 `
 
