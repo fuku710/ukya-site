@@ -20,7 +20,9 @@ class Layout extends React.Component {
       <LayoutContainer>
         <Global styles={globalStyle} />
         <HeaderContainer>
-          <Title>{title}</Title>
+          <Title>
+            <Link to="/">{title}</Link>
+          </Title>
           <Navbar
             location={location}
             isOpened={this.state.isOpenedMenu}
@@ -71,6 +73,10 @@ const Title = styled.h1`
   font-size: 32px;
   color: white;
   line-height: 1.5em;
+  > * {
+    color: inherit;
+    text-decoration: none;
+  }
 `
 
 const MainContainer = styled.main`
