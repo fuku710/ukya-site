@@ -59,7 +59,7 @@ const HeaderContainer = styled.div`
   flex-direction: row;
   align-items: center;
   background-color: deepskyblue;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
+  /* box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px; */
 `
 
 const Title = styled.h1`
@@ -74,7 +74,7 @@ const Title = styled.h1`
 `
 
 const MainContainer = styled.main`
-  margin: 8px;
+  margin: 0px;
   margin-right: auto;
   margin-left: auto;
   width: fit-content;
@@ -82,9 +82,13 @@ const MainContainer = styled.main`
 
 const Content = styled.div`
   padding: 8px;
-  max-width: 48rem;
+  width: 48rem;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px 0px;
+  @media (max-width: 768px) {
+    width: auto;
+    max-width: 48rem;
+  }
 `
 
 const Footer = styled.footer`

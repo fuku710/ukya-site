@@ -46,8 +46,6 @@ export default function Navbar({ location, isOpened, onClick }) {
 }
 
 const Nav = styled.nav`
-  /* background-color: deepskyblue;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 4px 0px; */
   @media (max-width: 768px) {
     margin-left: auto;
     margin-right: 16px;
@@ -74,10 +72,10 @@ const HambuergerMenuButton = styled.button`
 const HambuergerMenu = styled.ul`
   margin: 0px;
   padding: 16px;
-  width: 50vw;
+  width: 35vw;
   height: 100vh;
   position: fixed;
-  left: ${props => (props.isOpened ? '50vw' : '100vw')};
+  left: ${props => (props.isOpened ? '65vw' : '100vw')};
   top: 0;
   background: deepskyblue;
   display: flex;
