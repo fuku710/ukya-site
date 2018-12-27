@@ -11,14 +11,14 @@ function Bio() {
       render={data => {
         const { author, handleName, social } = data.site.siteMetadata
         return (
-          <BioWrapper>
+          <div>
             <h2>どんなサイト？</h2>
             <p>
               駄文を垂れ流したり
               <br />
               謎のゲームを公開してます
             </p>
-            <h2>管理人</h2>
+            <h2>管理者</h2>
             <Image
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
@@ -48,17 +48,12 @@ function Bio() {
                 {social.github}
               </a>
             </p>
-          </BioWrapper>
+          </div>
         )
       }}
     />
   )
 }
-
-const BioWrapper = styled.div``
-const Text = styled.p`
-  /* margin: 0px; */
-`
 
 const bioQuery = graphql`
   query BioQuery {
