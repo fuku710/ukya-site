@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import PageTransition from 'gatsby-plugin-page-transitions'
 
+
 import Navbar from './Navbar'
 
 class Layout extends React.Component {
