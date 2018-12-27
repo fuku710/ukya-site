@@ -3,7 +3,7 @@ module.exports = {
     title: `ukya.tk`,
     author: `Fukuda Naoto`,
     handleName: `never`,
-    description: `うきゃうきゃ`,
+    description: ``,
     siteUrl: `https://ukya.tk`,
     social: {
       twitter: `never9612`,
@@ -68,7 +68,6 @@ module.exports = {
       options: {
         name: `ukya.tk`,
         short_name: `ukya.tk`,
-        description:`うきゃうきゃ`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#00BFFF`,
