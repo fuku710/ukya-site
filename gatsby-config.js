@@ -66,13 +66,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `ukya.tk`,
+        short_name: `ukya.tk`,
+        description:`うきゃうきゃ`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        theme_color: `#00BFFF`,
+        icon: `content/assets/chimpanzee.png`,
       },
     },
     `gatsby-plugin-offline`,
