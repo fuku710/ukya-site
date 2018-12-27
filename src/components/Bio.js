@@ -12,6 +12,13 @@ function Bio() {
         const { author, handleName, social } = data.site.siteMetadata
         return (
           <BioWrapper>
+            <h2>どんなサイト？</h2>
+            <p>
+              駄文を垂れ流したり
+              <br />
+              謎のゲームを公開してます
+            </p>
+            <h2>管理人</h2>
             <Image
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
@@ -21,10 +28,15 @@ function Bio() {
                 border-radius: 100%;
               `}
             />
-            <Text>
-              Name:{author}
+            <p>
+              名前:{handleName}({author})
               <br />
-              HN:{handleName}
+              カレーとJavaScriptが好きなチンパンジー
+              <br />
+              Web周りの技術やゲーム開発を好む
+              <br />
+              好きな言語:JavaScript,C++,Python
+              <br />
               <br />
               Twitter:
               <a href={`https://twitter.com/${social.twitter}`}>
@@ -35,7 +47,7 @@ function Bio() {
               <a href={`https://github.com/${social.github}`}>
                 {social.github}
               </a>
-            </Text>
+            </p>
           </BioWrapper>
         )
       }}
@@ -45,7 +57,7 @@ function Bio() {
 
 const BioWrapper = styled.div``
 const Text = styled.p`
-  margin: 0px;
+  /* margin: 0px; */
 `
 
 const bioQuery = graphql`
