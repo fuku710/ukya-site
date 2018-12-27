@@ -59,7 +59,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-46825674-2`,
       },
     },
     `gatsby-plugin-feed`,
@@ -84,11 +84,6 @@ module.exports = {
     },
     `gatsby-plugin-emotion`,
     // `gatsby-plugin-page-transitions`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `UA-46825674-2`,
-      },
-    },
+    ,
   ],
 }
