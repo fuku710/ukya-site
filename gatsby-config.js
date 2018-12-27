@@ -3,7 +3,7 @@ module.exports = {
     title: `ukya.tk`,
     author: `Fukuda Naoto`,
     handleName: `never`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `うきゃうきゃ`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `never9612`,
