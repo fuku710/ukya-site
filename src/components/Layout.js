@@ -50,11 +50,7 @@ const globalStyle = css`
   }
 `
 
-const LayoutContainer = styled.div`
-  background-color: whitesmoke;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
-  height: fit-content;
-`
+const LayoutContainer = styled.div``
 
 const HeaderContainer = styled.div`
   display: flex;
